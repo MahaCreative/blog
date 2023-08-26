@@ -1,14 +1,5 @@
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
-
-// const bgAnimation = document.getElementById("bgAnimation");
-
-// const numberOfColorBoxes = 400;
-// for (let i = 0; i < numberOfColorBoxes; i++) {
-//     const colorBox = document.createElement("div");
-//     colorBox.classList.add("colorBox");
-//     bgAnimation.append(colorBox);
-// }
 function Header({ children, background = false }) {
     const [colorBoxes, setColorBoxes] = useState([]);
     const numberOfColorBoxes = 46;
@@ -25,7 +16,7 @@ function Header({ children, background = false }) {
 
     useEffect(() => {
         const colorBoxes = document.querySelectorAll(".colorBox");
-        const numberOfElementsToChange = 7;
+        const numberOfElementsToChange = 5;
         const selectedIndices = [];
 
         while (selectedIndices.length < numberOfElementsToChange) {
@@ -50,7 +41,9 @@ function Header({ children, background = false }) {
 
     return (
         <div className="relative   bg-slate-950 h-[60vh] sm:h-[90vh]  flex justify-center flex-col  transition-all duration-300 ease-linear">
-            <div className=" bgAnimation ">{colorBoxElements}</div>
+            <div className=" bgAnimation grid grid-cols-10">
+                {colorBoxElements}
+            </div>
             <div className="absolute left-0 bottom-0 backdrop:blur-sm flex justify-center items-center h-[100%]">
                 <div className="relative h-full px-4 md:p-16 grid-cols-1 lg:grid-cols-2 gap-3  transition-all duration-300 ease-linear">
                     {children}
