@@ -22,7 +22,9 @@ export default function MenuDropdown({ title, children }) {
             className="relative hover:cursor-pointer "
             onClick={() => setMenuOpen(!menuOpen)}
         >
-            <p className="text-white">{title}</p>
+            <p className="text-white font-fira font-extralight md:text-xs lg:text-md">
+                {title}
+            </p>
             <div className={clsx("relative duration-300 transition-all")}>
                 <div
                     className={clsx(
@@ -35,7 +37,7 @@ export default function MenuDropdown({ title, children }) {
                     <div
                         className={clsx(
                             menuOpen ? "" : "collapse",
-                            "duration-300 transition-all"
+                            "duration-300 transition-all "
                         )}
                     >
                         {children}

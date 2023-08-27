@@ -14,7 +14,11 @@ class ArticleControler extends Controller
      */
     public function index()
     {
-        //
+        $lastUpdated = Article::latest()->first();
+
+        return inertia('Blog/FrontUser/Article/Index/Index', [
+            'lastUpdated' => $lastUpdated
+        ]);
     }
 
     /**

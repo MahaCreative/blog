@@ -5,7 +5,7 @@ import React from "react";
 export default function BlogLayout({ children }) {
     return (
         <>
-            <div className="w-full h-full bg-slate-900">
+            <div className="relative w-full min-h-screen bg-slate-950">
                 <Navbar />
                 {children}
             </div>

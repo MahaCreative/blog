@@ -21,7 +21,7 @@ export default function ResponsiveNavbar({ open, close }) {
     };
     return (
         <>
-            <div className="fixed flex lg:hidden w-full z-[9999] bg-slate-900/50 backdrop-blur-sm">
+            <div className="flex md:hidden w-full z-[9999] bg-slate-900/50 backdrop-blur-sm">
                 <div className="flex justify-between w-full items-center">
                     <div className="px-4 py-4 relative">
                         <Link
